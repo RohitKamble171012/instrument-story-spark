@@ -78,14 +78,14 @@ export function Faculty() {
                 target="_blank" rel="noreferrer"
                 className="w-10 h-10 rounded-full bg-white text-[#F59E0B] hover:bg-[#F59E0B] hover:text-white transition-colors flex items-center justify-center"
               >
-                <Facebook className="w-4 h-4" />
+                <FacebookIcon className="w-4 h-4" />
               </a>
               <a
                 href="https://www.instagram.com/varjay.music.academy/"
                 target="_blank" rel="noreferrer"
                 className="w-10 h-10 rounded-full bg-white text-[#F59E0B] hover:bg-[#F59E0B] hover:text-white transition-colors flex items-center justify-center"
               >
-                <Instagram className="w-4 h-4" />
+                <InstagramIcon className="w-4 h-4" />
               </a>
             </div>
           </div>

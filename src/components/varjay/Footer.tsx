@@ -48,15 +48,15 @@ export function Footer() {
             <div className="flex gap-3 mt-6">
               <a href="https://www.youtube.com/channel/UCxrYgHmwDxVIpVjFvVadKYA" target="_blank" rel="noreferrer"
                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#F59E0B] hover:text-[#1C0A00] flex items-center justify-center transition-colors">
-                <Youtube className="w-4 h-4" />
+                <YoutubeIcon className="w-4 h-4" />
               </a>
               <a href="https://www.facebook.com/p/Varjay-Music-Academy-100077740792261/" target="_blank" rel="noreferrer"
                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#F59E0B] hover:text-[#1C0A00] flex items-center justify-center transition-colors">
-                <Facebook className="w-4 h-4" />
+                <FacebookIcon className="w-4 h-4" />
               </a>
               <a href="https://www.instagram.com/varjay.music.academy/" target="_blank" rel="noreferrer"
                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#F59E0B] hover:text-[#1C0A00] flex items-center justify-center transition-colors">
-                <Instagram className="w-4 h-4" />
+                <InstagramIcon className="w-4 h-4" />
               </a>
             </div>
           </div>
