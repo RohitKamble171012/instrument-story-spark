@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Facebook, Instagram } from "lucide-react";
+import { FacebookIcon, InstagramIcon } from "./SocialIcons";
 
 const badges = [
   { label: "Visharad — Tabla", color: "bg-amber-100 text-amber-800" },

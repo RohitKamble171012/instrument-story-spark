@@ -1,4 +1,5 @@
-import { Facebook, Instagram, Youtube, MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
+import { FacebookIcon, InstagramIcon, YoutubeIcon } from "./SocialIcons";
 import { INSTRUMENTS } from "./data";
 
 export function Footer() {
