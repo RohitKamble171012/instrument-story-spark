@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
-import { Play, ArrowRight, MapPin, Phone } from "lucide-react";
+import { Play, Pause, ArrowRight, MapPin, Phone } from "lucide-react";
+import { useRef, useState } from "react";
+import tablaAudio from "@/assets/audio/tabla.wav";
 
 const avatars = [
   { i: "AK", c: "from-amber-400 to-orange-500" },
