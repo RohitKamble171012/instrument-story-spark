@@ -21,9 +21,7 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50">
-      <div className="bg-[#F59E0B] text-white font-mono text-xs py-2 px-4 text-center">
-        🎵 Sanpada, Navi Mumbai · 📞 +91 777 000 3036 · Online &amp; Offline Classes
-      </div>
+
       <nav
         className={`bg-white border-b border-amber-200 transition-shadow ${
           scrolled ? "shadow-md" : ""
