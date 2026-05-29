@@ -22,6 +22,18 @@ const floatingNotes = [
 const marqueeWords = ["Tabla", "Guitar", "Piano", "Harmonium", "Violin", "Flute", "Dholak", "Ukulele", "Mandolin"];
 
 export function Hero() {
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [playing, setPlaying] = useState(false);
+  const toggleAudio = () => {
+    const a = audioRef.current;
+    if (!a) return;
+    if (a.paused) {
+      a.play().then(() => setPlaying(true)).catch(() => {});
+    } else {
+      a.pause();
+      setPlaying(false);
+    }
+  };
   return (
     <section className="relative bg-[#FEFAF1] overflow-hidden">
       {/* Floating musical notes */}
