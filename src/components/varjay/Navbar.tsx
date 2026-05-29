@@ -32,7 +32,7 @@ export function Navbar() {
             <img
               src="https://varjaymusic.com/wp-content/uploads/2024/05/logo.png"
               alt="Varjay Music Academy"
-              className="h-20 w-auto"
+              className="h-20 w-26"
             />
           </a>
           <div className="hidden lg:flex items-center gap-10">
