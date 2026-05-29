@@ -230,23 +230,34 @@ export function Hero() {
             transition={{ delay: 0.9, duration: 0.6 }}
             className="absolute top-[80px] left-0 z-30 bg-white rounded-2xl shadow-2xl p-3 pr-5 flex items-center gap-3 max-w-[260px]"
           >
-            <div className="relative w-12 h-12 rounded-xl bg-gradient-to-br from-[#F59E0B] to-[#F43F5E] flex items-center justify-center text-white text-2xl font-display">
-              ♪
-            </div>
+            <button
+              onClick={toggleAudio}
+              aria-label={playing ? "Pause tabla sample" : "Play tabla sample"}
+              className="relative w-12 h-12 rounded-xl bg-gradient-to-br from-[#F59E0B] to-[#F43F5E] flex items-center justify-center text-white shadow-lg hover:scale-105 transition-transform shrink-0"
+            >
+              {playing ? <Pause className="w-5 h-5 fill-current" /> : <Play className="w-5 h-5 fill-current ml-0.5" />}
+            </button>
             <div>
-              <p className="font-mono text-[10px] text-[#78716C] tracking-widest">NOW LEARNING</p>
+              <p className="font-mono text-[10px] text-[#78716C] tracking-widest">{playing ? "NOW PLAYING" : "TAP TO LISTEN"}</p>
               <p className="font-display text-sm font-semibold text-[#1C0A00]">Teen Taal · Tabla</p>
               <div className="flex items-end gap-0.5 mt-1 h-3">
                 {[3, 8, 5, 11, 7, 4, 9, 6].map((h, i) => (
                   <motion.span
                     key={i}
                     className="w-0.5 bg-[#F59E0B] rounded-full"
-                    animate={{ height: [`${h}px`, `${12 - h + 4}px`, `${h}px`] }}
-                    transition={{ duration: 0.8 + i * 0.05, repeat: Infinity, ease: "easeInOut" }}
+                    animate={playing ? { height: [`${h}px`, `${12 - h + 4}px`, `${h}px`] } : { height: `${h}px` }}
+                    transition={{ duration: 0.8 + i * 0.05, repeat: playing ? Infinity : 0, ease: "easeInOut" }}
                   />
                 ))}
               </div>
             </div>
+            <audio
+              ref={audioRef}
+              src={tablaAudio}
+              loop
+              onEnded={() => setPlaying(false)}
+              onPause={() => setPlaying(false)}
+            />
           </motion.div>
 
           {/* Middle photo */}
